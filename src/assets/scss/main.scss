@@ -1,0 +1,62 @@
+@import './_reset.scss';
+@import '_variables.scss';
+@import '_fonts.scss';
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+.form {
+  // .form__control
+  &__control {
+    margin: 8px 0;
+    padding-bottom: 1rem;
+  }
+  // .form__label
+  &__label {
+    display: inline-block;
+    font-weight: 500;
+    font-style: normal;
+    color: $label;
+    font-size: 1rem;
+  }
+  // .form__field
+  &__field {
+    width: 100%;
+    margin: 8px 0;
+    padding: 16px 0 16px 16px;
+    font-size: 1rem;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 6px;
+    border: 1px solid $disable;
+    background: #ffffff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:focus,
+    &:focus-within,
+    &.focus {
+      box-shadow: 0px 0px 0px 2px $primary inset;
+    }
+    &::placeholder {
+      color: $placeholder;
+    }
+  }
+  &__placeholder {
+    color: $placeholder;
+  }
+  // .form__field-deteils
+  &__field-deteils {
+    position: absolute;
+  }
+  // .form__field-error
+  &__field-error {
+    color: $error;
+  }
+}
+.title {
+  font-weight: bold;
+  font-size: 2.125rem;
+  color: $dark;
+}
+.color--primary {
+  color: $primary;
+}
